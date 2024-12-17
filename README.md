@@ -25,7 +25,7 @@
 ### 화면 업데이트가 빠르게 처리된다.
 
 <브라우저 렌더링 과정>
-![alt text](./React/image.png)
+![alt text](./React/img.png)
 
 DOM - Document Object Model, HTML이 자기가 더 쉽게 이해하기 위해 변환한 것. 문서 객체 모델
 CSSOM = CSS Object Model. CSS코드를 브라우저가 자기가 더 이해하기 쉽도록 변환한 것
@@ -89,5 +89,24 @@ Paintin - 실제로 화면에 그려내는 과정.
 - 컴포넌트 내부에 새로운 State를 생성하는 React Hook
 - 모든 useState는 useReducer로 대체 가능
 - 상태 관리 코드를 컴포넌트 외부로 분리할 수 있음
-  ![alt text](image.png)
-  ![alt text](image-1.png)
+  ![alt text](./React/image.png)
+  ![alt text](./React/image-1.png)
+
+# 최적화
+
+- 웹 서비스의 성능을 개선하는 모든 행위
+
+### React App 내부의 최적화 방법
+
+- 컴포넌트 내부의 불필요한 연산 방지
+- 컴포넌트 내부의 불필요한 함수 재생성 방지
+- 컴포넌트의 불필요한 리렌더링 방지
+
+# useMemo
+
+- "메모이제이션" 기법을 기반으로 불필요한 연산을 최적화 하는 리액트 훅
+  ![alt text](./React/image-2.png)
+
+# Memo
+
+![alt text](./React/image-3.png)
