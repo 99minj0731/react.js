@@ -83,3 +83,11 @@ Paintin - 실제로 화면에 그려내는 과정.
 - UI 상태 관리
 - 값 변경 시 화면 갱신
   ex. 사용자 입력 값 관리,버튼 클릭 카운터 등
+
+# useReducer
+
+- 컴포넌트 내부에 새로운 State를 생성하는 React Hook
+- 모든 useState는 useReducer로 대체 가능
+- 상태 관리 코드를 컴포넌트 외부로 분리할 수 있음
+  ![alt text](image.png)
+  ![alt text](image-1.png)
