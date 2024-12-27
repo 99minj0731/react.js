@@ -47,3 +47,7 @@
 .DiaryItem .button_section {
   min-width: 70px;
 }
+
+.info_section {
+  cursor: pointer;
+}
