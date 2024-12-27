@@ -5,9 +5,11 @@ import DiaryList from "../components/DiaryList"
 
 import { useState, useContext } from "react"
 import { DiaryStateContext } from "../App"
-
+import usePageTitle from "../hooks/usePageTitle"
 
 const Home = () => {
+
+  usePageTitle('감정 일기장')
 
   const data = useContext(DiaryStateContext)
 

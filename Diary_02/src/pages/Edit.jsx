@@ -5,11 +5,14 @@ import Header from "../components/Header"
 import Button from "../components/Button"
 import Editor from "../components/Editor"
 import useDiary from "../hooks/useDiary"
+import usePageTitle from "../hooks/usePageTitle"
 
-const Edit = () => {
+const Edit = () => {  
 
+  
   const nav = useNavigate()
   const params = useParams() // params는 현재 몇 번째 일기인지 
+  usePageTitle(`${params.id}번 일기 수정`)
   const curDiaryItem = useDiary(params.id)
 
   const {onDelete, onUpdate} = useContext(DiaryDispatchContext)

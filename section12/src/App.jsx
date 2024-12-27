@@ -54,6 +54,8 @@ function App() {
   const [data, dispatch] = useReducer(reducer, [] )
   const idRef = useRef(0)
 
+  console.log(data)
+
   useEffect(()=>{
     const storedData = localStorage.getItem("diary")
     if(!storedData){

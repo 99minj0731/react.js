@@ -1,5 +1,5 @@
 import "./Editor.css"
-import EmotionItem from "./emotionitem"
+import EmotionItem from "./EmotionItem"
 import Button from "./Button"
 import { useState, useEffect } from "react"
 import { useNavigate} from "react-router-dom"
