@@ -11,19 +11,19 @@ import New from './pages/New'
 const mockData = [
   {
     id:1, 
-    createdDate: new Date("2024-12-29").getTime(),
+    createdDate: new Date("2025-01-29").getTime(),
     emotionId:1,
     content: "1번 일기 내용"
   },
   {
     id:2, 
-    createdDate: new Date("2024-12-10").getTime(),
+    createdDate: new Date("2025-01-10").getTime(),
     emotionId:3,
     content: "2번 일기 내용"
   },
   {
   id:3, 
-  createdDate: new Date("2024-11-10").getTime(),
+  createdDate: new Date("2024-12-10").getTime(),
   emotionId:3,
   content: "3번 일기 내용"
   },
@@ -53,7 +53,7 @@ export const DiaryDispatchContext = createContext() //수정, 생성, 삭제용
 function App() {
 
   const [data, dispatch] = useReducer(reducer, mockData)
-  const idRef = useRef(3)
+  const idRef = useRef(4)
 
   const onCreate = (createdDate, emotionId, content) => {
     dispatch({
