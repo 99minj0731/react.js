@@ -1,7 +1,7 @@
 import "./Editor.css"
 import EmotionItem from "./EmotionItem"
 import Button from "./Button"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 
 const emotionList = [
@@ -27,7 +27,7 @@ const emotionList = [
   },
 ]
 
-const Editor = ({onSubmit}) => {
+const Editor = ({onSubmit, initData}) => {
 
   const nav = useNavigate()
 
@@ -49,7 +49,7 @@ const Editor = ({onSubmit}) => {
     if(date < 10){
       date = `0${date}`
     }
-     return `${year}-${month}-${date}`
+    return `${year}-${month}-${date}`
   }
 
   const onChangeInput = (e) => {
@@ -71,6 +71,15 @@ const Editor = ({onSubmit}) => {
   const onClickSubmitButton = () => {
     onSubmit(input)
   }
+
+  useEffect(() => {
+    if(initData){
+      setInput({
+        ...initData,
+        createdDate: new Date(Number(initData.createdDate))
+      })
+    }
+  },[initData])
 
   return (
     <div className="Editor">

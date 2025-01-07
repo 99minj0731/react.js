@@ -22,7 +22,7 @@ const mockData = [
     content:"2번 일기 내용",
   },
   {
-    id:2,
+    id:3,
     createdDate: new Date("2025-01-18").getTime(),
     emotionId:3,
     content:"3번 일기 내용",
@@ -40,7 +40,7 @@ function reducer(state, action) {
       : item )      // id가 다르다면 원래데이터로 
     case 'DELETE' :
       return state.filter((item) => 
-        {String(item.id) !== String(action.id)}
+        String(item.id) !== String(action.id)
       )
       default :
         return state
