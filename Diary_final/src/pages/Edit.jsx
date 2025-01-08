@@ -15,7 +15,8 @@ const Edit = () => {
   const [curDiaryItem, setCurDiaryItem] = useState()
 
   useEffect(() => {
-    const currentDiaryItem = data.find((item) => String(item.id)=== String(params.id))
+    const currentDiaryItem = data.find(
+      (item) => String(item.id)=== String(params.id))
     if(!currentDiaryItem) {
       window.alert("존재하지 않는 일기입니다.")
       nav('/', {replace:true})

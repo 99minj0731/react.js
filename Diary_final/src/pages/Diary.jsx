@@ -1,4 +1,7 @@
 import { useParams } from "react-router-dom"
+import Viewer from "../components/Viewer"
+import Header from "../components/Header"
+import Button from "../components/Button"
 
 const Diary = () => {
 
@@ -6,7 +9,8 @@ const Diary = () => {
 
   return (
     <div>
-      {params.id}번 일기입니다.
+      <Header title={"2024-02-08"} leftChild={<Button text={"< 뒤로가기"} />} rightChild={<Button text={"수정하기"} />}/>
+      <Viewer />
     </div>
   )
 }

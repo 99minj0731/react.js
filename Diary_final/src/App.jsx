@@ -34,6 +34,7 @@ function reducer(state, action) {
     case 'CREATE' :
       return [action.data, ...state]
     case 'UPDATE' :
+      console.log("일기를 수정했습니다", action.data.createdData)
       return state.map((item) => 
         String(item.id) === String(action.data.id)
       ? action.data // id가 일치하는는 것은 변경한 것으로 
@@ -68,12 +69,12 @@ function App() {
     })
   }
 
-  const onUpdate = (id, createdData, emotionId, content) => {
+  const onUpdate = (id, createdDate, emotionId, content) => {
     dispatch({
       type:"UPDATE",
       data:{
         id,
-        createdData, 
+        createdDate, 
         emotionId,
         content
       }
